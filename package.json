@@ -1,0 +1,36 @@
+{
+  "name": "inspiresx",
+  "version": "1.0.0",
+  "description": "Track Progress and Be Inspired ",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jasonnavarro86/InspiresX.git"
+  },
+  "keywords": [
+    "motivation",
+    "inspire",
+    "goals"
+  ],
+  "author": "Jason Navarro",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "react-router-dom": "^4.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/Jasonnavarro86/InspiresX/issues"
+  },
+  "homepage": "https://github.com/Jasonnavarro86/InspiresX#readme"
+}
