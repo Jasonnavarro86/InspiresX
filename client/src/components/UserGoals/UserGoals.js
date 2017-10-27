@@ -6,7 +6,7 @@ const UserGoals = (props) =>
 
         <div className="text-center">
 
-          
+          Hi
 
       
         </div>

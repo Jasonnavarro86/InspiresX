@@ -3,31 +3,30 @@ import { Link } from 'react-router-dom';
 
 class navBar extends React.Component{
 
-
- 
-
+  
     render(){
 
       return(
-    <div  className="" style={this.props.style4}>
+
+<div  className="" style={this.props.style4}>
     
-      
-     
+   <div className="btn-group" role="group">
 
-      <div className="btn-group" role="group">
-      <Link to=""  id="btnGroupDrop"  className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={this.props.style}>Log In</Link>
-      <div style={this.props.style6} className="dropdown-menu" aria-labelledby="btnGroupDrop">
-        <Link to="" className="dropdown-item" href="">FaceBook</Link>
-        <a className="dropdown-item" href="">Google</a>
-        <a className="dropdown-item" href="">GitHub</a>
-        <a className="dropdown-item" href="">LinkedIn</a>
-      </div>
+        <Link to=""  id="btnGroupDrop"  className="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={this.props.style}>Log In</Link>
+
+        <div style={this.props.style6} className="dropdown-menu" aria-labelledby="btnGroupDrop">
+
+            <Link to="" className="dropdown-item" href="">FaceBook</Link>
+
+             <a className="dropdown-item" href="">Google</a>
+             <a className="dropdown-item" href="">GitHub</a>
+             <a className="dropdown-item" href="">LinkedIn</a>
+
+        </div>
     </div>
-      <Link to="/about"  style={this.props.style} className="btn" >About Us <span className=""></span></Link>
-   
-      <Link to="contact"  style={this.props.style} className="btn" >Contact</Link>
-      
 
+      <Link to="/about"  style={this.props.style} className="btn" >About Us <span className=""></span></Link>
+      <Link to="contact"  style={this.props.style} className="btn" >Contact</Link>
 </div>
 )
     }
