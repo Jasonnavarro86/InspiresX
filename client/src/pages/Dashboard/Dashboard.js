@@ -1,10 +1,10 @@
 import React from "react";
-import DashNav from '../../components/DashNav';
+import DashMain from '../../components/DashMain';
 
 
 class Dashboard extends React.Component{
 
-render(){return(<DashNav url={this.props.match.url} uid={this.props.match.params.name}/>) }
+render(){return(<DashMain url={this.props.match.url} uid={this.props.match.params.name}/>) }
 
 } 
 export default Dashboard;

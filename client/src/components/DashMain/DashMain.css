@@ -1,12 +1,14 @@
 #DashNavMain{
     min-height: 100vh;
     min-width: 100vw;
+    clear: both;
 }
 
 #dashLand{
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 75vw;
     position: relative;
+    
   }
 
   .navbar{
@@ -20,5 +22,15 @@
     min-height: 100vh;
     padding-top: 3em;
     min-width: 75%;
+    position: relative;
+    clear: both;
     
   }
+
+  #mainDashH1{
+    font-family: 'Carrois Gothic SC', sans-serif;
+    color:silver;
+    font-weight: 10;
+  }
+
+  

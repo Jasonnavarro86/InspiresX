@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import UserGoals from "../UserGoals";
-import DashLoad from "../DashLoad";
+import DashNavBar from "../DashNavBar";
+import DashAdd from "../DashAdd";
+import DashResources from "../DashResources";
 import ProfilePhoto from '../ProfilePhoto';
 import Modal from "../Modal";
 import API from "../../utils/API";
-import "./DashNav.css"
+import "./DashMain.css"
 class DashNav extends React.Component{
 
   state ={
@@ -48,7 +50,7 @@ handlePageChange = page => {
 
 renderPage = () => {
   if (this.state.currentPage === `${this.props.url}`) {
-    return <div id="dashLand"><ProfilePhoto className="col"/>  <DashLoad handlePageChange={this.handlePageChange} currentPage={this.state.currentPage} url={this.props.url}/></div>;
+    return <div id="dashLand"><ProfilePhoto className="col"/> <div id="btnDiv" className="float-right"><DashAdd/> <DashResources/></div></div>;
   } else if (this.state.currentPage === `${this.props.url}/addGoal`) {
     return  <div id="dashLand" ><UserGoals handlePageChange={this.handlePageChange} currentPage={this.state.currentPage} url={this.props.url}/></div>;
   } else if (this.state.currentPage === `${this.props.url}/goalHistory`) {
@@ -63,41 +65,11 @@ renderPage = () => {
      return(
 
 <div id="DashNavMain">
-<nav className="navbar navbar-toggleable-md navbar-light bg-faded">
 
-     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-       <span className="navbar-toggler-icon"></span>
-
-    </button>
-
-      <a id="navBrand" className="navbar-brand ">InspiresX</a>
-
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-
-           <ul className="navbar-nav mr-auto">
-  
-             <li className="nav-item active float-right">
-               <Link to={this.props.url} className="btn col ">Home</Link>
-             </li>
-             <li className="nav-item active float-right">
-             
-               <Link to={this.props.url} className="btn col ">About Us</Link>
-             </li>
-             <li className="nav-item active float-right">
-               <Link to={this.props.url} className="btn col ">Contact</Link>
-             </li>
-   
-           </ul>
-  
-        </div>
-
-
-  </nav>
-
+  <DashNavBar url={this.props.url}/>
    <div id="mainDashBody" className="container">
 
-          <h1 className="display-4"> {`${this.state.firstname}X   Beyond Our Limits`}</h1>
+          <h1 id="mainDashH1"className=""> {`${this.state.firstname}X Current Goal's`}</h1>
 
           <hr></hr>
 

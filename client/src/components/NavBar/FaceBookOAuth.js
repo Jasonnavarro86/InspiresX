@@ -11,7 +11,7 @@ class LoginFB extends React.Component{
  
 //FaceBook Response
   responseFacebook (response) {
-    console.log(response.id);
+    
     const splitName = response.name.split(" ");
     let first;
     let last;
