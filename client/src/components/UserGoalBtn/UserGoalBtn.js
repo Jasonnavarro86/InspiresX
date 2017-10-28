@@ -22,7 +22,7 @@ const UserGoalBtn = (props) => (
 
         <Link to={`${props.url}`} className="btn btn-sm btn-danger">Completed My Goal!</Link> 
 
-        <Route exact path={`${props.url}/quit`} component={Quit}/>
+        <Route exact path={`${props.url}/quit`} component={"Quit"}/>
         
     </div>
 );

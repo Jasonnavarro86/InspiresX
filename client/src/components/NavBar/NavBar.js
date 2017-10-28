@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Login from "./GoogleOAuth"
+import LoginFB from "./FaceBookOAuth"
 class navBar extends React.Component{
 
   
@@ -16,9 +17,9 @@ class navBar extends React.Component{
 
         <div style={this.props.style6} className="dropdown-menu" aria-labelledby="btnGroupDrop">
 
-            <Link to="" className="dropdown-item" href="">FaceBook</Link>
+            <LoginFB to="" className="dropdown-item" href="">FaceBook</LoginFB>
 
-             <a className="dropdown-item" href="">Google</a>
+             <Login className="dropdown-item" href="">Google</Login>
              <a className="dropdown-item" href="">GitHub</a>
              <a className="dropdown-item" href="">LinkedIn</a>
 
