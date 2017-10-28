@@ -28,8 +28,9 @@
   }
 
   #mainDashH1{
-    font-family: 'Carrois Gothic SC', sans-serif;
-    color:silver;
+    /* font-family: 'Carrois Gothic SC', sans-serif; */
+    font-family: 'Gruppo', cursive;
+    color:#989494;
     font-weight: 10;
   }
 

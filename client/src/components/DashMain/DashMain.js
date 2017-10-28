@@ -69,7 +69,7 @@ renderPage = () => {
   <DashNavBar url={this.props.url}/>
    <div id="mainDashBody" className="container">
 
-          <h1 id="mainDashH1"className=""> {`${this.state.firstname}X Current Goal's`}</h1>
+          <h1 id="mainDashH1"className=""> {`${this.state.firstname}'s Current Goal's`}</h1>
 
           <hr></hr>
 

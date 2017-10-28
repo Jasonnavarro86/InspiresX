@@ -18,21 +18,21 @@ const DashNavBar = (props) =>
 
     </button>
 
-      <a id="navBrand" className="navbar-brand linkCol ">InspiresX</a>
+      <a id="navBrand" className="navbar-brand  ">InspiresX</a>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
            <ul className="navbar-nav mr-auto">
   
              <li className="nav-item active float-right">
-               <Link to={props.url} className="btn col ">Home</Link>
+               <Link to={props.url} className="btn col linkCol">Home</Link>
              </li>
              <li className="nav-item active float-right">
              
-               <Link to={props.url} className="btn col ">About Us</Link>
+               <Link to={props.url} className="btn col linkCol">About Us</Link>
              </li>
              <li className="nav-item active float-right">
-               <Link to={props.url} className="btn col ">Contact</Link>
+               <Link to={props.url} className="btn col linkCol">Contact</Link>
              </li>
    
            </ul>
