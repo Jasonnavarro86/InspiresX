@@ -12,6 +12,7 @@ module.exports = {
   findFbId: function(req, res) {
     db.Goal
       .findOne({fbauth: req.params.id})
+      .populate("newGoal")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -39,5 +40,13 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
+  createNewGoal: function(req, res) {
+    db.newGoal
+      .create(req.body)
+      .then(dbModel => {db.Goal.findOneAndUpdate({ fbauth : dbModel.fbauth}, { $push: { "newGoal": dbModel._id }} , { new: true }, function(err, data){res.json(data)}) })
+      .catch(err => res.status(422).json(err));
+  },
 };
+
+

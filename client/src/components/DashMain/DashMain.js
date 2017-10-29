@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import UserGoals from "../UserGoals";
 import DashNavBar from "../DashNavBar";
 import DashAdd from "../DashAdd";
 import DashResources from "../DashResources";
@@ -14,30 +13,32 @@ class DashNav extends React.Component{
     currentPage: `${this.props.url}`,
     firstname: "",
     lastname: "",
-    body: "", 
-    title: "",
+    goals: [],
     img: "",
     email: "",
     btnClick: "",
     date: "",
     update: "",
-    _id:""
+    _id:"",
+    fbauth:this.props.uid
+
   }
+
+
 
 componentDidMount() {
 
      API.findFbId(this.props.uid)
     .then(res => { 
-
+      console.log("pop?", res.data);
        if(res.data == null)
          {
            window.location.href = "/" 
          }else{
 
-           this.setState({ firstname: res.data.firstname, lastname: res.data.lastname, email: res.data.email, _id: res.data._id, btnClick: res.data.btnClick, update: res.data.update, date: res.data.date, img: res.data.img})
-           
+           this.setState({ firstname: res.data.firstname, lastname: res.data.lastname, email: res.data.email, _id: res.data._id, btnClick: res.data.btnClick, update: res.data.update, date: res.data.date, img: res.data.img, goals: res.data.newGoal});
+         
                }
-
            })
       .catch(err => console.log(err));
   }
@@ -50,9 +51,7 @@ handlePageChange = page => {
 
 renderPage = () => {
   if (this.state.currentPage === `${this.props.url}`) {
-    return <div id="dashLand"><ProfilePhoto className="col"/> <div id="btnDiv" className="float-right"><DashAdd/> <DashResources/></div></div>;
-  } else if (this.state.currentPage === `${this.props.url}/addGoal`) {
-    return  <div id="dashLand" ><UserGoals handlePageChange={this.handlePageChange} currentPage={this.state.currentPage} url={this.props.url}/></div>;
+    return <div id="dashLand"><ProfilePhoto className="col"/> <div id="btnDiv" className="float-right"><DashAdd onClick={() => this.playme()}/> <DashResources/></div></div>;
   } else if (this.state.currentPage === `${this.props.url}/goalHistory`) {
     return ;
   } else {
@@ -60,8 +59,24 @@ renderPage = () => {
   }
 }
 
- render() {
+ playme = () => {
+  document.getElementById("modalMovie").src = 'https://www.youtube.com/embed/fviFNrWKzZ8?autoplay=1&disablekb=1&showinfo=0&iv_load_policy=3&modestbranding=1&controls=0';
+  }
 
+  checkNewNote = (fbauth) =>{
+    API.findFbId(fbauth)
+    .then(res => { 
+      
+       this.setState({ goals: res.data.newGoal});
+      
+          })
+      .catch(err => console.log(err));
+  }
+
+
+
+ render() {
+console.log(this.state.goals);
      return(
 
 <div id="DashNavMain">
@@ -75,9 +90,10 @@ renderPage = () => {
 
       {this.renderPage()}
 
+      <Modal checkNewNote={this.checkNewNote} fbauth={this.state.fbauth}/>
   </div>
 
-<Modal/>
+
 </div>
 
 

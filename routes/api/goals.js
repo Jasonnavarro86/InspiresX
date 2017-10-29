@@ -14,4 +14,7 @@ router
   .delete(goalController.remove)
   .post(goalController.findFbId);
 
+  router
+  .route("/add/newgoal")
+  .post(goalController.createNewGoal);
 module.exports = router;

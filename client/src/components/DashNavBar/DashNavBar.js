@@ -25,7 +25,7 @@ const DashNavBar = (props) =>
            <ul className="navbar-nav mr-auto">
   
              <li className="nav-item active float-right">
-               <Link to={props.url} className="btn col linkCol">Home</Link>
+               <Link to="/" className="btn col linkCol">Home</Link>
              </li>
              <li className="nav-item active float-right">
              

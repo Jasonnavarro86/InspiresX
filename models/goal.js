@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 const goalSchema = new Schema({
   firstname: { type: String, required: true },
   lastname: { type: String, required: true },
-  body: String, 
-  title: String,
+  newGoal:[{
+    type: Schema.Types.ObjectId,
+    ref: "newGoal"}],
   img: String,
   email: String,
   btnClick: String,

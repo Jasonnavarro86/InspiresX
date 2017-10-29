@@ -1,3 +1,5 @@
 module.exports = {
-  Goal: require("./goal")
+  Goal: require("./goal"),
+  newGoal : require("./addgoal")
+
 };
