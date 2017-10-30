@@ -13,4 +13,20 @@
     color:whitesmoke;
     font-family: 'Gruppo', cursive;
     font-size: 1.2em;
+
 }
+
+.goalName{
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-size: 145%;
+}
+
+/* .completeBtn{
+    <button className="btn btn-sm  completeBtn">Complete</button>
+   position: absolute;
+   right:2%;
+   top:17%;
+   color:white;
+   background-color: rgba(115, 159, 178, 0.55);
+   font-family: 'Carrois Gothic SC', sans-serif;
+} */

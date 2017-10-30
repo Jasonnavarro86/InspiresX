@@ -24,8 +24,12 @@ class Modal extends React.Component{
     API.saveNewGoal(newGoals)
     .then(res => this.props.checkNewNote(res.data.fbauth))
     .catch(err => console.log(err));
-                      
+    this.stopme();
   }
+
+  stopme = () => {
+    document.getElementById("modalMovie").src = '';
+    }
 
   render(){
     

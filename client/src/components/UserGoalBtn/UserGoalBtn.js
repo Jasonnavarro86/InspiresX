@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Route } from "react-router-dom";
+import "./UserGoalBtn.css"
+import { Link } from "react-router-dom";
 
 
 
@@ -7,22 +8,21 @@ import { Link, Route } from "react-router-dom";
 const UserGoalBtn = (props) => (
 
 
-    <div>
-        <Link to={`${props.url}/quit`} className="btn btn-sm btn-danger"> Quit</Link>
+    <div id="userGoalDiv">
+        <Link to={`${props.url}/`} className="btn btn-md  linkBtn"> Quit</Link>
 
-         <Link to={`${props.url} `} className="btn btn-sm btn-danger"> Feel Like Quitting </Link>
+         <Link to={`${props.url}/ `} className="btn btn-md linkBtn"> Feel Like Quitting </Link>
 
-        <Link to={`${props.url}`} className="btn btn-sm btn-danger"> Need Help Learning</Link>
+        <Link to={`${props.url}/`} className="btn btn-md linkBtn"> Need Help Learning</Link>
 
-        <Link to={`${props.url}`} className="btn btn-sm btn-danger"> Need Help Pushing Through</Link>
+        <Link to={`${props.url}/`} className="btn btn-md  linkBtn "> Need Help Pushing Through</Link>
 
-        <Link to={`${props.url}`} className="btn btn-sm btn-danger"> Feel Good</Link>
+        <Link to={`${props.url}/`} className="btn btn-md  linkBtn "> Feel Good</Link>
 
-        <Link to={`${props.url}`} className="btn btn-sm btn-danger"> Feel Great</Link>
+        <Link to={`${props.url}/`} className="btn btn-md  linkBtn"> Feel Great</Link>
 
-        <Link to={`${props.url}`} className="btn btn-sm btn-danger">Completed My Goal!</Link> 
-
-        <Route exact path={`${props.url}/quit`} component={"Quit"}/>
+        <Link to={`${props.url}/`} className="btn btn-md  linkBtn"> Complete Goal !</Link>
+  
         
     </div>
 );

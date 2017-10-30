@@ -17,7 +17,7 @@ class navBar extends React.Component{
 
         <div style={this.props.style6} className="dropdown-menu" aria-labelledby="btnGroupDrop">
 
-            <LoginFB to="" className="dropdown-item" href="">FaceBook</LoginFB>
+            <LoginFB className="dropdown-item" href="">FaceBook</LoginFB>
 
              <Login className="dropdown-item" href="">Google</Login>
              <a className="dropdown-item" href="">GitHub</a>

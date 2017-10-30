@@ -7,13 +7,13 @@ export const UserGoalItem = props => (
     
       <div className="">
        
-        <a href="" className="goalName ">{props.title}</a>
+        <a href={`/dashboard/${props.fbauth}/goal/${props.uid}`} className="goalName ">{props.title}</a>
         
         
           
-          <p className="goalMotivation">Motivation for this goal: {props.motivation} </p>
+          <p className="goalMotivation">{props.motivation} </p>
          
-      
+          
       </div>
 
   </li>

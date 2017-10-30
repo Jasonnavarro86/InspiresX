@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import DashNavBar from "../DashNavBar";
 import DashAdd from "../DashAdd";
 import DashResources from "../DashResources";
+import DashGoalHistory from "../DashGoalHistory";
 import ProfilePhoto from '../ProfilePhoto';
 import Modal from "../Modal";
 import { UserGoals, UserGoalItem } from "../UserGoals";
@@ -94,6 +95,7 @@ console.log(this.state.goals);
 
              <div id="btnDiv" className="float-right">
                <DashAdd onClick={() => this.playme()}/> 
+               <DashGoalHistory/>
                <DashResources/>
              </div>
 
@@ -104,7 +106,7 @@ console.log(this.state.goals);
               ):(<UserGoals> 
                 {this.state.goals.map( goal => {
                     return(
-                      <UserGoalItem key={goal.title} title={goal.title} motivation={goal.motivation}/>
+                      <UserGoalItem key={goal.title} fbauth={this.state.fbauth} title={goal.title} motivation={goal.motivation} uid={goal._id}/>
                       
                     )
 
