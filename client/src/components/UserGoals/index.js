@@ -1,1 +1,3 @@
-export { default } from "./UserGoals";
+
+export * from "./UserGoals";
+export * from "./UserGoalItem";

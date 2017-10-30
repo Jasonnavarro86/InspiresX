@@ -1,0 +1,16 @@
+.theUl{
+    width: 50em;
+    position: absolute;
+    right: 0em;
+    top:8.7em;
+  
+}
+
+.theLi{
+    margin-bottom: 1em;
+    border: 2px solid rgba(32, 118, 206, 0.76);
+    background-color: rgba(2, 58, 115, 0.87);
+    color:whitesmoke;
+    font-family: 'Gruppo', cursive;
+    font-size: 1.2em;
+}

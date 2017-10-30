@@ -5,6 +5,7 @@ import DashAdd from "../DashAdd";
 import DashResources from "../DashResources";
 import ProfilePhoto from '../ProfilePhoto';
 import Modal from "../Modal";
+import { UserGoals, UserGoalItem } from "../UserGoals";
 import API from "../../utils/API";
 import "./DashMain.css"
 class DashNav extends React.Component{
@@ -14,7 +15,7 @@ class DashNav extends React.Component{
     firstname: "",
     lastname: "",
     goals: [],
-    img: "",
+    img: `https:avatars1.githubusercontent.com/u/28733244?s=400&u=ebe2e31590e192c16a5ac393cff060f145d764e7&v=4`,
     email: "",
     btnClick: "",
     date: "",
@@ -36,7 +37,7 @@ componentDidMount() {
            window.location.href = "/" 
          }else{
 
-           this.setState({ firstname: res.data.firstname, lastname: res.data.lastname, email: res.data.email, _id: res.data._id, btnClick: res.data.btnClick, update: res.data.update, date: res.data.date, img: res.data.img, goals: res.data.newGoal});
+           this.setState({ firstname: res.data.firstname, lastname: res.data.lastname, email: res.data.email, _id: res.data._id, btnClick: res.data.btnClick, update: res.data.update, date: res.data.date, goals: res.data.newGoal});
          
                }
            })
@@ -51,7 +52,7 @@ handlePageChange = page => {
 
 renderPage = () => {
   if (this.state.currentPage === `${this.props.url}`) {
-    return <div id="dashLand"><ProfilePhoto className="col"/> <div id="btnDiv" className="float-right"><DashAdd onClick={() => this.playme()}/> <DashResources/></div></div>;
+    return <div id="dashLand"><ProfilePhoto url={this.state.img} className="col"/> <div id="btnDiv" className="float-right"><DashAdd onClick={() => this.playme()}/> <DashResources/></div><UserGoalItem/></div>;
   } else if (this.state.currentPage === `${this.props.url}/goalHistory`) {
     return ;
   } else {
@@ -88,7 +89,34 @@ console.log(this.state.goals);
 
           <hr></hr>
 
-      {this.renderPage()}
+          <div id="dashLand">
+            <ProfilePhoto url={this.state.img} className="col"/>
+
+             <div id="btnDiv" className="float-right">
+               <DashAdd onClick={() => this.playme()}/> 
+               <DashResources/>
+             </div>
+
+
+            
+              {!this.state.goals.length ?(
+                <h1 className="text-center">No Goals to Display</h1>
+              ):(<UserGoals> 
+                {this.state.goals.map( goal => {
+                    return(
+                      <UserGoalItem key={goal.title} title={goal.title} motivation={goal.motivation}/>
+                      
+                    )
+
+                })}
+                
+                </UserGoals>)}
+              
+            
+
+
+
+          </div>
 
       <Modal checkNewNote={this.checkNewNote} fbauth={this.state.fbauth}/>
   </div>
