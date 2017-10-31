@@ -1,23 +1,25 @@
 .theUl{
-    width: 50em;
+    width: 54em;
     position: absolute;
     right: 0em;
-    top:8.7em;
+    top:3em;
   
 }
 
 .theLi{
     margin-bottom: 1em;
-    border: 2px solid rgba(32, 118, 206, 0.76);
-    background-color: rgba(2, 58, 115, 0.87);
-    color:whitesmoke;
+    border: 1px solid rgb(119, 167, 213);
+    background-color: rgb(255, 255, 255);
+    color:#787676;
     font-family: 'Gruppo', cursive;
+    
     font-size: 1.2em;
 
 }
 
 .goalName{
     font-family: 'Carrois Gothic SC', sans-serif;
+    
     font-size: 145%;
 }
 

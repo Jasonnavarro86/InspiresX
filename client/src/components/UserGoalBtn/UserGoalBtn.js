@@ -5,23 +5,23 @@ import { Link } from "react-router-dom";
 
 
 
-const UserGoalBtn = (props) => (
+const UserGoalBtn = ({onClick, id}) => (
 
 
     <div id="userGoalDiv">
-        <Link to={`${props.url}/`} className="btn btn-md  linkBtn"> Quit</Link>
+        <button onClick={() => onClick(id, "quit")} className="btn btn-md  linkBtn"> Quit</button>
 
-         <Link to={`${props.url}/ `} className="btn btn-md linkBtn"> Feel Like Quitting </Link>
+         <button  onClick={() => onClick(id, "feelquit")} className="btn btn-md linkBtn"> Feel Like Quitting </button>
 
-        <Link to={`${props.url}/`} className="btn btn-md linkBtn"> Need Help Learning</Link>
+        <button  onClick={() => onClick(id, "helplearn")} className="btn btn-md linkBtn"> Need Help Learning</button>
 
-        <Link to={`${props.url}/`} className="btn btn-md  linkBtn "> Need Help Pushing Through</Link>
+        <button  onClick={() => onClick(id, "helppush")} className="btn btn-md  linkBtn "> Need Help Pushing Through</button>
 
-        <Link to={`${props.url}/`} className="btn btn-md  linkBtn "> Feel Good</Link>
+        <button  onClick={() => onClick(id, "feelgood")} className="btn btn-md  linkBtn "> Feel Good</button>
 
-        <Link to={`${props.url}/`} className="btn btn-md  linkBtn"> Feel Great</Link>
+        <button  onClick={() => onClick(id, "feelgreat")} className="btn btn-md  linkBtn"> Feel Great</button>
 
-        <Link to={`${props.url}/`} className="btn btn-md  linkBtn"> Complete Goal !</Link>
+        <button  onClick={() => onClick(id, "completed")} className="btn btn-md  linkBtn"> Complete Goal !</button>
   
         
     </div>

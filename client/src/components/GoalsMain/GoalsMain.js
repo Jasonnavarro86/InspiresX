@@ -5,6 +5,7 @@ import DashNavBar from "../DashNavBar";
 import GoalHomeBtn from "../GoalHomeBtn";
 import UserGoalBtn from "../UserGoalBtn";
 import GoalsForm from "../GoalsForm";
+import Chart from "../GoalCharts"
 import "./GoalsMain.css"
 class GoalsMain extends React.Component{
   
@@ -40,10 +41,6 @@ componentDidMount() {
   }
 
 
-handlePageChange = page => {
-  this.setState({ currentPage: page });
-};
-
 renderPage = () => {
   if (this.state.currentPage === `${this.props.url}`) {
     return <div id="dashLand"></div>;
@@ -68,7 +65,9 @@ renderPage = () => {
       .catch(err => console.log(err));
   }
 
-
+log =(id, action)=> {
+  
+  console.log(id,action)};
 
  render() {
 console.log(this.state);
@@ -89,17 +88,13 @@ console.log(this.state);
             
                <div id="dashLand">
                  <div id="btnDiv" className="">
-                 <UserGoalBtn/>
+                  <UserGoalBtn id={id._id} onClick={this.log}/>
                  </div>
-
-
-                 <GoalsForm/>
+                    <Chart label={id.title} date={'8-8-2017'}/>
+                  <GoalsForm/>
               
-
-
-            
                </div>
-               <hr></hr> <h1 className="mainDashH1"> {id.subject}</h1>
+              
           </div>)
             }
         

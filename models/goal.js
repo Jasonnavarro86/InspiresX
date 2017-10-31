@@ -12,6 +12,7 @@ const goalSchema = new Schema({
   btnClick: String,
   date: { type: Date, default: Date.now },
   update: { type: Date, default: Date.now },
+  completed:{ type: Number, default: 0 },
   fbauth: Number
 });
 

@@ -18,7 +18,6 @@ class DashNav extends React.Component{
     goals: [],
     img: `https:avatars1.githubusercontent.com/u/28733244?s=400&u=ebe2e31590e192c16a5ac393cff060f145d764e7&v=4`,
     email: "",
-    btnClick: "",
     date: "",
     update: "",
     _id:"",
