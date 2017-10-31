@@ -1,5 +1,5 @@
 import React from 'react';
-import {Bar, Line, Pie} from 'react-chartjs-2';
+import { Line} from 'react-chartjs-2';
 import "./GoalChart.css"
 
 
@@ -17,17 +17,13 @@ constructor(props){
                     backgroundColor: [
                         
                         'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(54, 162, 235, 0.2)'
+                       
     
                     ],
                     borderColor: [
                         
                         'rgba(127,188,239, 0.8)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(54, 162, 235, 1)'
+                        
                     ],
                     borderWidth: 1
                 }]

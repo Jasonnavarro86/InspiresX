@@ -20,5 +20,5 @@ router
 
   router
   .route("/add/newgoal/update")
-  .post(goalController.updateUserGoal)
+  .put(goalController.updateUserGoal)
 module.exports = router;

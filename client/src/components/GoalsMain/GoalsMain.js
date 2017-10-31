@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import DashNavBar from "../DashNavBar";
 import GoalHomeBtn from "../GoalHomeBtn";
 import UserGoalBtn from "../UserGoalBtn";
 import GoalsForm from "../GoalsForm";
-import Chart from "../GoalCharts"
+import Chart from "../GoalCharts";
+
 
 import "./GoalsMain.css"
 
@@ -18,6 +18,8 @@ class GoalsMain extends React.Component{
     date: "",
     goals:[],
     update: "",
+    chartVals:[],
+    chartKey: [],
     _id:this.props.uid,
     fbauth:this.props.fbauth
 
@@ -59,9 +61,17 @@ checkNewNote = (fbauth) =>{
 
 
 
-log =(id, action)=> {
-  
-  console.log(id,action)
+log =(id, action, val)=> {
+  const update = {
+      key: action,
+      _id: id,
+      val: val
+  }
+  console.log("main", update);
+  API.updateUserGoal(update)
+  .then(res => console.log(res.data))
+  .catch(err => console.log(err))
+
 };
 
 
@@ -88,7 +98,7 @@ console.log(this.state);
                  <div id="btnDiv" className="">
                   <UserGoalBtn id={id._id} onClick={this.log}/>
                  </div>
-                    <Chart label={id.title} date={'8-8-2017'}/>
+                    <Chart chartVals={id.chartVals} label={id.title} date={'8-8-2017'}/>
                   <GoalsForm/>
               
                </div>

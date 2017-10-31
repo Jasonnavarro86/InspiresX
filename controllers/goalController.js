@@ -48,13 +48,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   updateUserGoal: function(req, res) {
-    const key = req.key;
-  
-    db.Goal
-    .findOneAndUpdate({ _id : req._id}, { $push: {  key : req.value }} , { new: true }, function(err, data){res.json(data)})
+    
+    db.newGoal
+    .findOneAndUpdate({ _id : req.body._id}, { $push: {  "chartLabels": req.body.key, "chartValues": req.body.val}} , { new: true },  function(err, data){res.json(data)})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
 };
-
-
