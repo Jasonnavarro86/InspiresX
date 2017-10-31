@@ -1,0 +1,15 @@
+.uploadForm{
+    position: absolute;
+    top:18em;
+    font-family: 'Gruppo', cursive;
+}
+
+button{
+      /* font-family: 'Carrois Gothic SC', sans-serif; */
+      font-family: 'Gruppo', cursive;
+}
+
+#photoFile{
+    font-family: 'Gruppo', cursive;
+    border: none;
+}

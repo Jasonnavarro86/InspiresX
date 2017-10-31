@@ -6,7 +6,9 @@ import GoalHomeBtn from "../GoalHomeBtn";
 import UserGoalBtn from "../UserGoalBtn";
 import GoalsForm from "../GoalsForm";
 import Chart from "../GoalCharts"
+
 import "./GoalsMain.css"
+
 class GoalsMain extends React.Component{
   
   state ={
@@ -41,21 +43,11 @@ componentDidMount() {
   }
 
 
-renderPage = () => {
-  if (this.state.currentPage === `${this.props.url}`) {
-    return <div id="dashLand"></div>;
-  } else if (this.state.currentPage === `${this.props.url}/goalHistory`) {
-    return ;
-  } else {
-    return ;
-  }
-}
-
- playme = () => {
+playme = () => {
   document.getElementById("modalMovie").src = 'https://www.youtube.com/embed/fviFNrWKzZ8?autoplay=1&disablekb=1&showinfo=0&iv_load_policy=3&modestbranding=1&controls=0';
   }
 
-  checkNewNote = (fbauth) =>{
+checkNewNote = (fbauth) =>{
     API.findFbId(fbauth)
     .then(res => { 
       
@@ -65,9 +57,15 @@ renderPage = () => {
       .catch(err => console.log(err));
   }
 
+
+
 log =(id, action)=> {
   
-  console.log(id,action)};
+  console.log(id,action)
+};
+
+
+
 
  render() {
 console.log(this.state);

@@ -17,4 +17,8 @@ router
   router
   .route("/add/newgoal")
   .post(goalController.createNewGoal);
+
+  router
+  .route("/add/newgoal/update")
+  .post(goalController.updateUserGoal)
 module.exports = router;

@@ -23,5 +23,8 @@ export default {
   },
   saveNewGoal: function(userData) {
     return axios.post("/api/goals/add/newgoal", userData);
+  },
+  updateUserGoal: function(userData) {
+    return axios.post("/api/goals/add/newgoal/update", userData);
   }
 };

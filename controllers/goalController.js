@@ -47,6 +47,14 @@ module.exports = {
       .then(dbModel => {db.Goal.findOneAndUpdate({ fbauth : dbModel.fbauth}, { $push: { "newGoal": dbModel._id }} , { new: true }, function(err, data){res.json(data)}) })
       .catch(err => res.status(422).json(err));
   },
+  updateUserGoal: function(req, res) {
+    const key = req.key;
+  
+    db.Goal
+    .findOneAndUpdate({ _id : req._id}, { $push: {  key : req.value }} , { new: true }, function(err, data){res.json(data)})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  }
 };
 
 
