@@ -34,4 +34,12 @@
     font-weight: 10;
   }
 
+  #noDisplayH1{
+    font-family: 'Gruppo', cursive;
+    color:#989494;
+    position: absolute;
+    right: 8em;
+    top:3em;
+
+  }
   

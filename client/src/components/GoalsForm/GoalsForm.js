@@ -10,13 +10,13 @@ const GoalsForm = (props) =>
 
 
 <form id="goalForm">
-<h1 className="display-6">Enter New Updates</h1>
+<h1 className="display-6">Enter TODOs</h1>
 <div className="form-group">
-<label for="formGroupExampleInput2">Update Title</label>
+<label for="formGroupExampleInput2">Title</label>
 <input type="text" className="form-control" id="formGroupExampleInput2" placeholder=""/>
 </div>
 <div className="form-group">
-  <label for="formGroupExampleInput">Update Body</label>
+  <label for="formGroupExampleInput">Details</label>
   <textarea rows="3" className="form-control" id="formGroupExampleInput" placeholder=""/>
 </div>
 

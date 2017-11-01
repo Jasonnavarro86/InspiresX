@@ -50,7 +50,7 @@ module.exports = {
   updateUserGoal: function(req, res) {
     
     db.newGoal
-    .findOneAndUpdate({ _id : req.body._id}, { $push: {  "chartLabels": req.body.key, "chartValues": req.body.val}} , { new: true },  function(err, data){res.json(data)})
+    .findOneAndUpdate({ _id : req.body._id}, { $push: {  "chartLabels": req.body.key, "chartValues": req.body.val,"update": req.body.update }} , { new: true })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }

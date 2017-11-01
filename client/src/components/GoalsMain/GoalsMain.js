@@ -65,9 +65,10 @@ log =(id, action, val)=> {
   const update = {
       key: action,
       _id: id,
-      val: val
+      val: val,
+      update: Date.now()
   }
-  console.log("main", update);
+  
   API.updateUserGoal(update)
   .then(res => console.log(res.data))
   .catch(err => console.log(err))
@@ -78,7 +79,7 @@ log =(id, action, val)=> {
 
 
  render() {
-console.log(this.state);
+console.log(this.state.goals);
      return(
 
 <div id="DashNavMain">
@@ -86,6 +87,7 @@ console.log(this.state);
   <DashNavBar url={this.props.url}/>
      {this.state.goals.map(id => {
        if(id._id === this.state._id){
+         
         return(
                 
           <div id="mainDashBody" className="container">
@@ -98,7 +100,8 @@ console.log(this.state);
                  <div id="btnDiv" className="">
                   <UserGoalBtn id={id._id} onClick={this.log}/>
                  </div>
-                    <Chart chartVals={id.chartVals} label={id.title} date={'8-8-2017'}/>
+                    <Chart chartValues={id.chartValues} chartLabel={id.chartLabels} label={id.title} date1={id.date} date2={id.update}/>
+                    <h2 className="motivationH2 "> Motivation: <br/>{id.motivation}</h2>
                   <GoalsForm/>
               
                </div>

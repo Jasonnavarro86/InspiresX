@@ -18,7 +18,9 @@ class Modal extends React.Component{
     body: document.getElementById("description").value,
     motivation: document.getElementById("motivation").value,
     fbauth: parseInt(this.props.fbauth),
-    completed: false
+    completed: false,
+    date: Date.now(),
+    update: Date.now()
     }
 
     API.saveNewGoal(newGoals)

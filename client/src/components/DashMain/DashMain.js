@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import DashNavBar from "../DashNavBar";
 import DashAdd from "../DashAdd";
 import DashResources from "../DashResources";
@@ -104,7 +103,7 @@ console.log(this.state.goals);
                 </div>
             
                   {!this.state.goals.length ?(
-                     <h1 className="text-center">No Goals to Display</h1>
+                     <h1 id="noDisplayH1" className="text-center"> Click on + New Goal <br/>  to add a Goal </h1>
                      ):(<UserGoals> 
                          {this.state.goals.map( goal => {
                            return(

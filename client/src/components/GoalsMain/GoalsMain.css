@@ -51,3 +51,12 @@
 
     font-family: 'Carrois Gothic SC', sans-serif;
   }
+
+  .motivationH2{
+      position: absolute;
+      right:3em;
+      top:4.5em;
+      color:rgb(127, 128, 158);
+      font-family: 'Gruppo', cursive;
+ 
+  } 

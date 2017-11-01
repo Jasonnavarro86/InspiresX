@@ -9,12 +9,11 @@ const newGoalSchema = new Schema({
     motivation: String,
     fbauth: Number,
     quit: {type: Boolean, default: false},
- 
     chartLabels:[],
     chartValues:[],
     completed: {type: Boolean, default: false},
-    date: { type: Date, default: Date.now },
-    update: [{ type: Date, default: Date.now }]
+    date: Date,
+    update: [{type:Date}]
     
 })
 

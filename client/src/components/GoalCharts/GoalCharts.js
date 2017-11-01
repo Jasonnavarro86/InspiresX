@@ -6,14 +6,24 @@ import "./GoalChart.css"
 
 class Chart extends React.Component{
     
+    eachItem = (props) => {
+        return props.chartValues;
+    } 
+
 constructor(props){
+
+   
     super(props);
+    
+
+
+
     this.state ={
         chartData:{
-                labels: ["Feel Like Quitting", "Need Help Learning", "Fear", "Joy", "Sadness"],
+                labels: props.chartLabel,
                 datasets: [{
-                    label: `${props.date} TO ${props.date}`,
-                    data: [1,2,3,4,5],
+                    label: `${props.date1.split("T")[0]} TO ${ props.date2[props.date2.length -1].split("T")[0]}`,
+                    data: this.eachItem(props),
                     backgroundColor: [
                         
                         'rgba(75, 192, 192, 0.2)',
@@ -28,18 +38,22 @@ constructor(props){
                     borderWidth: 1
                 }]
             },
+
+            hi :  this.eachItem(props)
+
         }
     }
-
-    createSocialChart = () => {}
+   
        
 
     render(){
+        console.log(this.state);
         return(
            
             <div className="chart">
             <h6 className="text-center"> GOAL STATS</h6>
-            <Line
+            <Line 
+            id = "chartLine"
             data={this.state.chartData}
             width={10}
             height={4}
