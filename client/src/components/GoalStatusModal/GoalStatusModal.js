@@ -40,7 +40,7 @@ class statusModal extends React.Component{
     <iframe title="inspiresX" width="360" height="215" className="statusiframe" src="https://www.youtube.com/embed/Eu_dUxTg33I?showinfo=0&iv_load_policy=3&modestbranding=1&controls=0" frameborder="0" allowfullscreen></iframe>
     <iframe title="inspiresX" width="360" height="215" className="statusiframe" src="https://www.youtube.com/embed/xp2qjshr-r4?showinfo=0&iv_load_policy=3&modestbranding=1&controls=0" frameborder="0" allowfullscreen></iframe>
     <iframe title="inspiresX" width="360" height="215" className="statusiframe last" src="https://www.youtube.com/embed/2aXQTmxMNYY?showinfo=0&iv_load_policy=3&modestbranding=1&controls=0" frameborder="0" allowfullscreen></iframe>
-    <a type="" className="btn btn-lg btnStatus"  href=" /" >CLOSE</a>
+    <a type="" className="btn btn-lg btnStatus"  href={`/dashboard/${this.props.fbauth}/goal/${this.props.url}`} >CLOSE</a>
     </div>
    
 </div>
