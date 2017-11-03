@@ -33,7 +33,14 @@ max-width: 60%;
     color: white;
     font-family: 'Gruppo', cursive;
     margin-right: 1.4em;
-    margin-bottom: 1.4em;
+    margin-bottom: 1.4em
  
   
+}
+
+.modalVent{
+  
+    color: #1B2F80;
+    font-family: 'Gruppo', cursive; 
+    font-size: 3em; 
 }
