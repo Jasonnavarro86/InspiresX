@@ -1,0 +1,64 @@
+#mainModalthough{
+    background-color: #FAFAFA;
+    position: relative;
+    top:5em;
+    width:80%;
+    height:50em;
+    overflow: auto;
+    padding: 2em;
+    background-color: #FFFFFF;
+    
+}
+
+.hr{
+    background-color: #000000;
+    margin-top: 5em;
+    width: 80%;
+}
+
+.h1ModalI{
+    margin-bottom: 2em;
+    margin-top: 1em;
+    font-family: 'Gruppo', cursive;
+    font-size: 2em;
+    color: #7FBCEF;
+    width:60%;
+    margin-left:20%;
+    line-height: 1.5;
+    
+}
+
+#statusMovie{
+    width:58%;
+    height:43%;
+    left:20%;  
+    border: 5px outset #7FBCEF;
+    box-shadow: 8px 8px 4px #8E8D8D;
+    background-color: black;
+}
+
+
+#statusVidDiv{
+   left:2.5%;  
+   margin-bottom: 7em;
+
+}
+
+.statusiframe{
+  margin-left: 6em;
+  margin-top: 6em;
+  border: 5px outset #67737D;
+  box-shadow: 8px 8px 4px #888888;
+  
+}
+
+.btnStatus{
+    background-color: #7FBCEF;
+    color:white;
+  position: absolute;
+  bottom: -8em;
+  right : 8em;
+  margin-bottom: 2em;
+  font-family: 'Gruppo', cursive;
+}
+

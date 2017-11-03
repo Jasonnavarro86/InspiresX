@@ -52,10 +52,12 @@
   }
 
   .motivationH2{
-    color:rgb(127, 128, 158);
+    color: #847D7D;
     font-family: 'Gruppo', cursive;
-    font-size: 140%;
+    font-size: 160%;
     margin-top: -0.7em;
+    font-weight: 500;
+  
   } 
 
   #h3Div{

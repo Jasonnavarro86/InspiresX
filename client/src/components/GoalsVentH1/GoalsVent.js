@@ -42,6 +42,10 @@ class GoalsVent extends React.Component{
     
   }
 
+  disableTodo = () =>{
+    this.setState({disabled: "Completed"} )
+  }
+
  render(){
 console.log(this.state);
         return(
@@ -53,16 +57,15 @@ console.log(this.state);
 {this.state.vent.map(item => {return (
 
   <div className="btnDiv" >
-  <button className={"mapBtn btn btn-md"} onClick={() => this.ventModal()} data-title={item.title} data-toggle="modal" data-target={`#${item._id}`}> {item.title}</button>
+   <button className={"mapBtn btn btn-md"} onClick={() => this.ventModal()}  data-toggle="modal" data-target={`#${item._id}`}> {item.title}</button>
   </div>
   
- 
 )})}
 </div>
 <form id="goalVent">
-<h1 className="display-6 text-center">Enter TODOs</h1>
+<h3 className="formH1 text-center">Enter New TODOs</h3>
 <div className="form-group">
-<label for="formGroupExampleInput2">{}</label>
+<label for="formGroupExampleInput2">Title</label>
 <input type="text" className="form-control" id="ventTitle" placeholder=""/>
 </div>
 <div className="form-group">
@@ -70,7 +73,7 @@ console.log(this.state);
   <textarea rows="3" className="form-control" id="ventDetails" placeholder=""/>
 </div>
 
-<button type="submit" onClick={(e) => {e.preventDefault(); this.handleSubmit()}} className="btn btn-primary btn-sm submit">Submit</button>
+<button type="submit" onClick={(e) => {e.preventDefault(); this.handleSubmit()}} className="btn btn-sm submit">Submit</button>
 </form> 
 {this.state.vent.map(item => {return (
 <div className="modal fade modalVent" id={item._id} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -82,12 +85,12 @@ console.log(this.state);
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    <div className="modal-body">
-      {item.body}
+    <div className="modal-body container">
+     <p> {item.body}</p>
     </div>
     <div className="modal-footer">
       <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancel</button>
-      <button type="button" className="btn btn-primary">Save changes</button>
+      <button type="button" onClick={() => this.disableTodo}className="btn btn-primary">Complete This Task</button>
     </div>
   </div>
 </div>

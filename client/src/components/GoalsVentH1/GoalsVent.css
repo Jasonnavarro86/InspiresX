@@ -1,46 +1,53 @@
-
-
-.GoalsVentDiv{
+.GoalsVentDiv {
     margin-top: 7%;
 }
 
-#goalVent{
-
-margin-top: 3em;
-max-width: 60%;
+#goalVent {
+    margin-top: 14.5em;
+    max-width: 60%;
+    background-color: #383B3D;
+    color: white;
+    padding: 43px;
+    border: 3px outset #91ABC3;
+    box-shadow: 8px 8px 4px #888888;
 }
 
-.motivation5{
-    
-    color:rgb(127, 128, 158);
+.motivation5 {
+    color: rgb(127, 128, 158);
     font-family: 'Gruppo', cursive;
     max-width: 60%;
-
 }
 
-
-.mapBtnDiv{
+.mapBtnDiv {
     max-width: 60%;
 }
 
-.btnDiv{
-    
-   
+.btnDiv {
     display: inline;
 }
-.mapBtn{
-    background-color: #5F99FF;
+
+.mapBtn {
+    background-color: #7FBCEF;
     color: white;
     font-family: 'Gruppo', cursive;
     margin-right: 1.4em;
-    margin-bottom: 1.4em
- 
-  
+    margin-bottom: 1.4em;
+    font-weight: 700;
+    font-size: 1.1em;
 }
 
-.modalVent{
-  
-    color: #1B2F80;
-    font-family: 'Gruppo', cursive; 
-    font-size: 3em; 
+.modalVent {
+    color: #687090;
+    font-family: 'Gruppo', cursive;
+    font-size: 1em;
+    
+}
+
+.modal-body {
+    font-size: 2em;
+}
+
+.submit{
+    background-color: #7FBCEF;
+    color:white;
 }

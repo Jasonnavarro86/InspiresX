@@ -6,6 +6,7 @@ import UserGoalBtn from "../UserGoalBtn";
 import GoalsVent from "../GoalsVentH1";
 import Chart from "../GoalCharts";
 import GoalMotivationVideos from "../GoalMotivation";
+import StatusModal from "../GoalStatusModal";
 
 import "./GoalsMain.css"
 
@@ -43,6 +44,13 @@ playme = () => {
   document.getElementById("modalMovie").src = 'https://www.youtube.com/embed/fviFNrWKzZ8?autoplay=1&disablekb=1&showinfo=0&iv_load_policy=3&modestbranding=1&controls=0';
   }
 
+playmeStatus = () => {
+  document.getElementById("statusMovie").src = 'https://www.youtube.com/embed/5diEq1gTE4Y?autoplay=1&disablekb=1&showinfo=0&iv_load_policy=3&modestbranding=1&controls=0';
+  }
+stopmeStatus = () => {
+    document.getElementById("statusMovie").src = '';
+}
+
 checkNewNote = (fbauth) =>{
     API.findFbId(fbauth)
        .then(res =>{    
@@ -71,11 +79,13 @@ console.log(this.state.goals);
 <div id="DashNavMain">
 
   <DashNavBar url={this.props.url}/>
+  
      {this.state.goals.map(id => {
        if(id._id === this.state._id){
          
         return(               
           <div id="mainDashBody" className="container">
+          <StatusModal url={id._id} fbauth={id.fbauth}/>
           <GoalHomeBtn fbauth={this.state.fbauth}/> 
             <h1 id="mainGoalhH1" className="mainDashH1"> {id.title} <em className="mute">{id.subject}</em></h1>
             
@@ -85,18 +95,19 @@ console.log(this.state.goals);
                
                  <div id="btnDiv" className="">
                  
-                  <UserGoalBtn id={id._id} onClick={this.log}/>
+                  <UserGoalBtn playmeStatus={this.playmeStatus} id={id._id} onClick={this.log}/>
                  </div>
 
                     <Chart chartValues={id.chartValues} chartLabel={id.chartLabels} label={id.title} date1={id.date} date2={id.update}/>
                     
                     <h3 className="motivation4"><strong> Motivation </strong> <hr/></h3> <br/>
                     <div id="h3Div">
-                     <h3 className="motivationH2 "><br/>{id.motivation}</h3>
+                     <h3 className="motivationH2 "><br/><em>{id.motivation}</em></h3>
                     </div>
 
                   <GoalsVent vent={id} noteId={id._id}/>
                   <GoalMotivationVideos/>
+                  
                </div>
               
           </div>)
@@ -104,6 +115,7 @@ console.log(this.state.goals);
         
         
         })}
+        
 </div>
 
 
