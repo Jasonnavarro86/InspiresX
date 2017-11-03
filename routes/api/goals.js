@@ -20,5 +20,27 @@ router
 
   router
   .route("/add/newgoal/update")
-  .put(goalController.updateUserGoal)
+  .put(goalController.updateUserGoal);
+
+  router
+  .route("/add/newgoal/update/vent")
+  .post(goalController.saveVent);
+
+  router
+  .route("/add/newgoal/update/vent/:id")
+  .post(goalController.updateVent);
+  
+  router
+  .route("/add/newgoal/update/ventnote")
+  .post(goalController.addVentToNote);
+  
+  router
+  .route("/add/newgoal/update/vent/populate/:id")
+  .post(goalController.populateVentId)
+  
+
+  
+   
+  
+
 module.exports = router;

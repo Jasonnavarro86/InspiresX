@@ -4,3 +4,8 @@
     color: rgba(95, 169, 244, 0.87);
     font-family: 'Carrois Gothic SC', sans-serif;
 }
+
+#navBrand{
+    font-family: 'Carrois Gothic SC', sans-serif;
+    margin-left: 7.5em;
+}

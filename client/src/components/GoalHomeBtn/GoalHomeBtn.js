@@ -11,7 +11,7 @@ const GoalHomeBtn = (props) =>
 
 
  
-  <Link id="goalHomeBtn" to={`/dashboard/${props.fbauth}`} className="btn btn-sm btn-light float-right"> Current Goal's </Link>
+  <Link id="goalHomeBtn" to={`/dashboard/${props.fbauth}`} className="btn btn-sm btn-light float-right">All Current Goal's </Link>
   
 
 

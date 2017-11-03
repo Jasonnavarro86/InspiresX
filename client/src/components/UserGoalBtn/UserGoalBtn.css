@@ -3,10 +3,21 @@
     font-family: 'Carrois Gothic SC', sans-serif;
     margin-right: .3em;
     background-color: #7FBCEF;
+    
   
 }
 
 #userGoalDiv{
-    margin-top: 2em;
+    margin-top: 0em;
   
+}
+
+#completeBtn{
+    color: #466CCB;
+}
+
+.GoalBtnDiv{
+    font-family: 'Gruppo', cursive;
+    color: #7FBCEF;
+    font-size: 20px;
 }

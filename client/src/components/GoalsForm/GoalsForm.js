@@ -7,8 +7,10 @@ import "./GoalsForm.css";
 const GoalsForm = (props) =>
 
 
-
-
+<div className="GoalsFormDiv">
+<div className="yarn">
+<h3 className="motivationH3 text-center"> TODOs<hr/></h3>
+</div>
 <form id="goalForm">
 <h1 className="display-6">Enter TODOs</h1>
 <div className="form-group">
@@ -24,6 +26,6 @@ const GoalsForm = (props) =>
 </form>
 
   
-
+</div>
 
 export default GoalsForm;

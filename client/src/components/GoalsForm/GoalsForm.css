@@ -1,8 +1,22 @@
 
+.GoalsFormDiv{
+    margin-top: 7%;
+}
 
+.divH{
+    margin-bottom: 47%;
+}
 
 #goalForm{
 
-margin-top: 5em;
-max-width: 60%;
+    margin-top: 3em;
+    max-width: 60%;
+    
+}
+
+.motivationH3{
+    color:rgb(127, 128, 158);
+    font-family: 'Gruppo', cursive;
+    max-width: 60%;
+
 }

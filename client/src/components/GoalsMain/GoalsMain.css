@@ -8,15 +8,15 @@
     min-height: 100vh;
     min-width: 75vw;
     position: relative;
-    
+    clear: both;
   }
 
   .navbar{
-      background-color: #333;
+    background-color: #333;
   }
 
   #navBrand{
-      color:white;
+    color:white;
   }
   #mainDashBody{
     min-height: 100vh;
@@ -35,11 +35,11 @@
   }
 
   #btnDiv{
-      clear: both;
+    clear: both;
   }
 
   .mute{
-      font-size: 50%;
+    font-size: 50%;
   }
 
   form{
@@ -48,15 +48,31 @@
   }
 
   .submit{
-
     font-family: 'Carrois Gothic SC', sans-serif;
   }
 
   .motivationH2{
-      position: absolute;
-      right:3em;
-      top:4.5em;
-      color:rgb(127, 128, 158);
-      font-family: 'Gruppo', cursive;
- 
+    color:rgb(127, 128, 158);
+    font-family: 'Gruppo', cursive;
+    font-size: 140%;
+    margin-top: -0.7em;
   } 
+
+  #h3Div{
+    position: absolute;
+    right:0em;
+    top:11.8em;
+    width: 32%;
+    height:11.3%;
+    overflow: scroll; 
+  }
+
+  .motivation4{
+    color:rgb(127, 128, 158);
+    font-family: 'Gruppo', cursive;
+    position: absolute;
+    right: 0em;
+    top:5.1em;
+    width: 32%;
+    max-height:24%;
+  }  

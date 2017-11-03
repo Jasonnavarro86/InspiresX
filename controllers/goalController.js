@@ -13,6 +13,7 @@ module.exports = {
     db.Goal
       .findOne({fbauth: req.params.id})
       .populate("newGoal")
+    
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -50,8 +51,33 @@ module.exports = {
   updateUserGoal: function(req, res) {
     
     db.newGoal
-    .findOneAndUpdate({ _id : req.body._id}, { $push: {  "chartLabels": req.body.key, "chartValues": req.body.val,"update": req.body.update }} , { new: true })
+      .findOneAndUpdate({ _id : req.body._id}, { $push: {  "chartLabels": req.body.key, "chartValues": req.body.val,"update": req.body.update }} , { new: true })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
+  saveVent: function(req, res) {
+    db.newVent
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  updateVent: function(req, res) {
+    db.newVent
+      .findOneAndUpdate({ note_id: req.params.id }, { deleted: true })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  addVentToNote: function(req, res) {
+    db.newGoal
+      .findOneAndUpdate({ _id: req.body.noteId },{ $push: {  "vent": req.body._id}} , { new: true })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  populateVentId: function(req, res) {
+    db.newGoal
+      .findOne({_id: req.params.id})
+      .populate("vent")
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 };

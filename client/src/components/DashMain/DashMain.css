@@ -1,45 +1,44 @@
 #DashNavMain{
     min-height: 100vh;
     min-width: 100vw;
-    clear: both;
+    clear: both; 
 }
 
 #dashLand{
     min-height: 100vh;
     min-width: 75vw;
     position: relative;
-    
-  }
+}
 
-  .navbar{
-      background-color: #333;
-  }
+.navbar{
+    background-color: #333;
+}
 
-  #navBrand{
-      color:white;
-  }
-  #mainDashBody{
+#navBrand{
+    color:white;
+}
+
+#mainDashBody{
     min-height: 100vh;
     padding-top: 3em;
     min-width: 75%;
     position: relative;
     clear: both;
-    
-  }
+}
 
-  #mainDashH1{
+#mainDashH1{
     /* font-family: 'Carrois Gothic SC', sans-serif; */
     font-family: 'Gruppo', cursive;
-    color:#989494;
+    color: #7FBCEF;
     font-weight: 10;
-  }
 
-  #noDisplayH1{
+}
+
+#noDisplayH1{
     font-family: 'Gruppo', cursive;
     color:#989494;
     position: absolute;
     right: 8em;
     top:3em;
-
-  }
+}
   

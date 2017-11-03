@@ -1,0 +1,39 @@
+
+
+.GoalsVentDiv{
+    margin-top: 7%;
+}
+
+#goalVent{
+
+margin-top: 3em;
+max-width: 60%;
+}
+
+.motivation5{
+    
+    color:rgb(127, 128, 158);
+    font-family: 'Gruppo', cursive;
+    max-width: 60%;
+
+}
+
+
+.mapBtnDiv{
+    max-width: 60%;
+}
+
+.btnDiv{
+    
+   
+    display: inline;
+}
+.mapBtn{
+    background-color: #5F99FF;
+    color: white;
+    font-family: 'Gruppo', cursive;
+    margin-right: 1.4em;
+    margin-bottom: 1.4em;
+ 
+  
+}

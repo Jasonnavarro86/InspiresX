@@ -18,7 +18,7 @@ class DashNav extends React.Component{
     firstname: "",
     lastname: "",
     goals: [],
-    img:"http://hope4merton.com/wp-content/uploads/2015/12/profile-placeholder.gif",
+    img:"http://hypegirls.com/wp-content/uploads/2013/09/dreams_quote_web.jpg",
     img2: `https:avatars1.githubusercontent.com/u/28733244?s=400&u=ebe2e31590e192c16a5ac393cff060f145d764e7&v=4`,
     email: "",
     date: "",
@@ -87,20 +87,22 @@ console.log(this.state.goals);
 <div id="DashNavMain">
 
   <DashNavBar url={this.props.url}/>
+  
    <div id="mainDashBody" className="container">
+     <div id="btnDiv" className="float-right">
+        <DashAdd onClick={() => this.playme()}/> 
+        <DashGoalHistory/>
+        <DashResources/>
+    </div>
+       <h1 id="mainDashH1"className=""> {`${this.state.firstname}'s Current Goal's`}</h1>
+         
+            <hr></hr>
 
-          <h1 id="mainDashH1"className=""> {`${this.state.firstname}'s Current Goal's`}</h1>
-
-          <hr></hr>
-
-          <div id="dashLand">
-              <ProfilePhoto url={this.state.img} className="col"/>
-              <Upload upload={this.upload}/>
-                <div id="btnDiv" className="float-right">
-                 <DashAdd onClick={() => this.playme()}/> 
-                 <DashGoalHistory/>
-                 <DashResources/>
-                </div>
+              <div id="dashLand">
+        
+                <ProfilePhoto url={this.state.img} className="col"/>
+                 <Upload upload={this.upload}/>
+                
             
                   {!this.state.goals.length ?(
                      <h1 id="noDisplayH1" className="text-center"> Click on + New Goal <br/>  to add a Goal </h1>

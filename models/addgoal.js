@@ -13,7 +13,10 @@ const newGoalSchema = new Schema({
     chartValues:[],
     completed: {type: Boolean, default: false},
     date: Date,
-    update: [{type:Date}]
+    update: [{type:Date}],
+    vent:[{
+        type: Schema.Types.ObjectId,
+        ref: "newVent"}],
     
 })
 

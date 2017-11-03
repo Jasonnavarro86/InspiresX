@@ -1,0 +1,19 @@
+#MotivationalVid{
+    position: absolute;
+    right:0em;
+    top:20em;
+    display: block;
+}
+
+#MotivationalVid iframe{
+   
+    display: block;
+}
+
+.GoaliframeMain{
+    margin-bottom: 55.8%;
+}
+
+.Goaliframe{
+    margin-bottom: 5%;
+}

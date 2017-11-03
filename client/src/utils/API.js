@@ -26,5 +26,17 @@ export default {
   },
   updateUserGoal: function(userData) {
     return axios.put("/api/goals/add/newgoal/update", userData);
+  },
+  saveVent: function(userData) {
+    return axios.post("/api/goals/add/newgoal/update/vent", userData);
+  },
+  updateVent: function(id) {
+    return axios.post("/api/goals/add/newgoal/update/vent/" + id);
+  },
+  populateVent: function(id) {
+    return axios.post("/api/goals/add/newgoal/update/vent/populate/" + id);
+  },
+  addVentToNote: function(body) {
+    return axios.post("/api/goals/add/newgoal/update/ventnote/", body);
   }
 };

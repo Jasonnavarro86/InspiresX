@@ -10,7 +10,7 @@ const DashGoalHistory = (props) =>
 
 
  
-  <button id="historyBtn"  className="btn btn-sm btn-light " > Completed Goal's </button>
+  <button id="historyBtn"  className="btn btn-md btn-light " > Completed Goal's </button>
   
 
 
