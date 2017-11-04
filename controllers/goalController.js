@@ -80,4 +80,18 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findVideos: function(req, res) {
+    const reqName = req.body.name;
+    db.newGoal
+      .findOne({ reqName : req.body.name})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  putVideos: function(req, res) {
+    db.newGoal
+      .findOneAndUpdate({ _id : req.body._id}, { $push: {  "great": req.body.great, "good": req.body.good, "hopeless" : req.body.hopeless, "motivationvid": req.body.motivationvid, "pushing": req.body.pushing}} , { new: true })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  
 };

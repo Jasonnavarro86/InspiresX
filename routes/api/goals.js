@@ -2,10 +2,11 @@ const router = require("express").Router();
 const goalController = require("../../controllers/goalController");
 
 // Matches with "/api/goals"
-router.route("/")
+router
+  .route("/")
   .get(goalController.findAll)
   .post(goalController.create);
-
+  
 // Matches with "/api/goals/:id"
 router
   .route("/:id")
@@ -16,8 +17,11 @@ router
 
   router
   .route("/add/newgoal")
-  .post(goalController.createNewGoal);
+  .get(goalController.findVideos)
+  .post(goalController.createNewGoal)
+  
 
+  
   router
   .route("/add/newgoal/update")
   .put(goalController.updateUserGoal);
@@ -32,15 +36,14 @@ router
   
   router
   .route("/add/newgoal/update/ventnote")
-  .post(goalController.addVentToNote);
+  .post(goalController.addVentToNote)
   
   router
   .route("/add/newgoal/update/vent/populate/:id")
   .post(goalController.populateVentId)
-  
 
+  router
+  .route("/add/newgoal/update/vent/populate/modal/videos")
+  .post(goalController.putVideos);
   
-   
-  
-
 module.exports = router;

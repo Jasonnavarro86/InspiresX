@@ -38,5 +38,12 @@ export default {
   },
   addVentToNote: function(body) {
     return axios.post("/api/goals/add/newgoal/update/ventnote/", body);
+  },
+  findVideo: function(userData) {
+    return axios.get("/api/goals/add/newgoal", userData);
+  },
+  putVideo: function(userData) {
+    return axios.post("/api/goals/add/newgoal/update/vent/populate/modal/videos", userData);
   }
+  
 };
